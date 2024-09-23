@@ -1,0 +1,20 @@
+
+{% block content%}
+{% if form.error %}
+<p class="error" > хер </p >
+{% endif%}
+
+
+<form action="." method="POST">
+    <label for="username"> логин: </label>
+    <input type="text" name="username" value="" id="username">
+
+    <label for="password"> логин: </label>
+    <input type="password" name="password" value="" id="password">
+
+
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next||escape }}">
+
+</form>
+{% endblock %}
